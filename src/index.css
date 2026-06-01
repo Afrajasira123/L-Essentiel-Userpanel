@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Marcellus", serif;
+  /* font-family: "Sofia Sans", sans-serif; */
+}
+
+/* Remove Chrome autofill background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  /* -webkit-box-shadow: 0 0 0 1000px transparent inset !important; */
+  -webkit-text-fill-color: black;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* hide scrollbar but allow scroll globally */
+html, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Also keep the utility class for specific elements if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
