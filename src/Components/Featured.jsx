@@ -18,6 +18,8 @@ const Featured = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+        console.log("BASE URL =", base_url);
+        console.log("FEATURED URL =", `${base_url}/product/featured`);
         const res = await axios.get(`${base_url}/product/featured`);
         if (res.data && res.data.products) {
           setProducts(res.data.products);
