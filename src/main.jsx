@@ -12,7 +12,7 @@ const stripePromise = loadStripe(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/L-Essentiel">
+    <BrowserRouter basename="/">
       <Elements stripe={stripePromise}>
         <App />
       </Elements>
